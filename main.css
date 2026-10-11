@@ -1,0 +1,43 @@
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFFFFF;
+    color: #1F2937;
+}
+
+/* ---------- Testimonial slider ---------- */
+.testimonial-swiper .swiper-slide { height: auto; }
+/* linear easing so the continuous autoplay glides instead of stuttering slide-to-slide */
+.testimonial-swiper .swiper-wrapper { transition-timing-function: linear; }
+.testimonial-pagination .swiper-pagination-bullet { background: rgba(0,0,0,0.18); opacity: 1; width: 8px; height: 8px; transition: all .3s; }
+.testimonial-pagination .swiper-pagination-bullet-active { background: #3b82f6; width: 24px; border-radius: 9999px; }
+.testimonial-prev.swiper-button-disabled, .testimonial-next.swiper-button-disabled { opacity: .35; cursor: default; }
+
+/* Instagram sets min-width:326px on its iframes, which overflows narrow cards */
+.testimonial-swiper iframe.instagram-media,
+#ig-grid iframe.instagram-media { min-width: 0 !important; }
+
+/* ---------- Scroll progress + header ---------- */
+/* #scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; transform-origin: 0 50%; transform: scaleX(0);
+    background: linear-gradient(90deg, #719de4, #3b82f6, #F87171); pointer-events: none; } */
+#site-header { transition: box-shadow .35s ease; }
+#site-header.is-scrolled { box-shadow: 0 10px 30px -14px rgba(153, 27, 27, .35); }
+#site-header nav a { position: relative; }
+#site-header nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; border-radius: 2px;
+    background: #3b82f6; transform: scaleX(0); transform-origin: left; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+#site-header nav a:hover::after, #site-header nav a.is-active::after { transform: scaleX(1); }
+#site-header nav a.is-active { color: #3b82f6; }
+
+/* ---------- Marquee (CSS-only, the two identical groups make it seamless) ---------- */
+.marquee-track { will-change: transform; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-group span { padding: 0 1.75rem; white-space: nowrap; }
+.marquee-group i { font-style: normal;  }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ---------- Keyboard focus ---------- */
+a:focus-visible, button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    #site-header nav a::after { transition: none; }
+}
