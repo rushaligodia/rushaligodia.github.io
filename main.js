@@ -9,9 +9,9 @@
         feedUrl: '',
         pageSize: 6,
         posts: [
-            'https://www.instagram.com/reel/DYxHNLljbZX/',
-            'https://www.instagram.com/p/DTiDZbxjTPw/',
-            'https://www.instagram.com/p/DLKz2gmz3ob/',
+            'https://www.instagram.com/reel/C3FYzKRJInq/',
+            'https://www.instagram.com/reel/DQmTaw_k8RK/',
+            'https://www.instagram.com/reel/DJFB0L6t-9N/',
             // 'https://www.instagram.com/reel/DVnKUNVjKeR/',
             // 'https://www.instagram.com/p/DbTG0ZCDbk8/',
             // 'https://www.instagram.com/reel/DTzVu7MjSeA/'
